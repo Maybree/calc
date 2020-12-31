@@ -29,6 +29,11 @@ public class Calc {
             romanMaths = false;
         }
 
+        // проверка входных данных на условия
+        if (!((1 <= num1i && num1i <= 10) && (1 <= num2i && num1i <= 10))) {
+            throw new Exception("Входные данные вне диапазона доступных значений.");
+        }
+
         // вычисление
         switch(op) {
             case '+': ans = num1i + num2i;
